@@ -1,8 +1,12 @@
 module workshop_javafx_jdbc {
+
     requires javafx.controls;
     requires javafx.fxml;
-	requires javafx.graphics;
+
+    exports application;
+    exports gui;
+    exports model.entites;
 
     opens gui to javafx.fxml;
-    exports application;
+    opens model.entites to javafx.base;
 }
